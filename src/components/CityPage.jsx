@@ -100,16 +100,18 @@ function TownPage() {
      
       {town !== null && <TownCard town={town} />}
       <Button
-      className="btn-success mt-5 mx-auto"
-        onClick={() => {
-          dispatch({
-            type: "ADD_TO_FAV",
-            payload: params.name,
-          });
-        }}
-      >
-        Add to your Favourites
-      </Button>
+  className="btn-success mt-5 mx-auto"
+  onClick={() => {
+    dispatch({
+      type: "ADD_TO_FAV",
+      payload: params.name,
+    });
+  }}
+  style={{ display: "block", margin: "0 auto" }}
+>
+  Add to your Favourites
+</Button>
+
       {forecast.length > 0 && (
         <Carousel className="w-50 mx-auto">
         {forecast.map((item, index) => (
