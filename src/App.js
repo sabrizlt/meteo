@@ -4,8 +4,8 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Home from "./components/Home";
-import TownPage from "./components/TownPage";
-import FavTowns from "./components/FavTowns";
+import TownPage from "./components/CityPage";
+import FavTowns from "./components/FavCity";
 
 function App() {
   return (

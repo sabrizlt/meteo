@@ -1,5 +1,5 @@
 import { Container, Button, Carousel, Card, Row, Col } from "react-bootstrap";
-import TownCard from "./TownCard";
+import TownCard from "./CityCard";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
