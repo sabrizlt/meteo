@@ -58,7 +58,7 @@ const Searchbar = function () {
         <Form.Control
           type="search"
           placeholder="Cerca una città"
-          className="me-2"
+          className="me-2 ricerca"
           aria-label="Search"
           value={town}
           onChange={(e) => setTown(e.target.value)}

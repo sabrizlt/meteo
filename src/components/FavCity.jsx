@@ -43,19 +43,19 @@ const FavTowns = () => {
 
   return (
     <div>
-      <h2 className="text-light text-center mt-5">Le mie città:</h2>
+      <h2 className="text-light text-center mt-5 fs-1 fw-bolder preferiti">PREFERITI</h2>
       <div >
         {weatherData.map((data, i) => {
           return (
             <Card
-            className="text-center mx-auto w-100"
+            className="text-center mx-auto mt-5 w-100"
               key={data.name + i}
               style={{ width: "18rem", marginBottom: "1rem" }}
             >
               <Card.Body className="preferita">
                 <Card.Title className="top">
-                  <Link to={`/${data.name}`}>{data.name}</Link>
-                  <p className="mt-3 fs-1">
+                  <Link to={`/${data.name}`} className="fw-bold fs-1">{data.name}</Link>
+                  <p className="mt-3 fs-1 fw-bold">
                     {data.main && data.main.temp
                       ? Math.round(tempConverter(data.main.temp)) + "°C"
                       : "N/A"}
@@ -63,7 +63,7 @@ const FavTowns = () => {
                 </Card.Title>
                 <Button
                   className="m-2"
-                  variant="danger"
+                  variant="dark"
                   onClick={() => {
                     dispatch({
                       type: "REMOVE_FROM_FAV",

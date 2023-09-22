@@ -1,48 +1,81 @@
-html,
-body,
-#root {
-  height: 100%;
-  background-color: rgb(109, 144, 196);
-
-}
-
 body {
+  background-image: url('/src/img/sfondo\ meteo2.png');
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .Town {
-  background-color: rgba(141, 141, 141, 0.297);
-  border-color: transparent;
-
+  background-color: rgba(0, 0, 0, 0.587);
+  border-radius: 20px;
+  border: 2px solid white;
+  backdrop-filter: blur(10px);
+  color: white !important;
   font-size: 2em;
 }
 
 .giornaliero {
-  background-color: rgba(141, 141, 141, 0.297);
-  border-color: transparent;
-  border-bottom: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.587);
+  border: 2px solid white;
+  backdrop-filter: blur(10px);
+  color: white !important;
 }
 
 .searchbar {
   width: 1000px;
+
+}
+
+.ricerca {
+  background-color: transparent;
+  border: 2px solid white;
+  backdrop-filter: blur(10px);
+}
+
+.carosello-city {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+
+  backdrop-filter: blur(10px);
+  color: white !important;
 }
 
 .city {
-  background-color: transparent;
-  color: white;
+  background-color: rgba(255, 255, 255, 0.587);
+  border-radius: 20px !important;
+  border: 2px solid rgb(0, 0, 0);
+  backdrop-filter: blur(10px);
+
+  color: black !important;
 
 }
 
 .preferita {
-  color: black;
-  background-color: rgba(0, 0, 255, 0.591);
-  border-color: transparent;
+  background-color: rgba(0, 0, 0, 0.587);
+  border-radius: 20px;
+  border: 2px solid white;
+  backdrop-filter: blur(10px);
 }
 
 a {
   text-decoration: none;
   color: black;
   font-size: 1.5em;
+}
+
+.meteo-city {
+  background-color: rgba(0, 0, 0, 0.587);
+  border-radius: 20px;
+  border: 2px solid white;
+  backdrop-filter: blur(10px);
+}
+
+.preferiti {
+  background-color: rgba(255, 255, 255, 0.587);
+  border-radius: 20px;
+  border: 2px solid rgb(0, 0, 0);
+  backdrop-filter: blur(10px);
+  color: black !important;
 }

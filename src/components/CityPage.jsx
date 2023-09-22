@@ -100,7 +100,7 @@ function TownPage() {
      
       {town !== null && <TownCard town={town} />}
       <Button
-  className="btn-success mt-5 mx-auto"
+  className="btn-dark mt-5 mx-auto"
   onClick={() => {
     dispatch({
       type: "ADD_TO_FAV",
@@ -112,31 +112,32 @@ function TownPage() {
   Add to your Favourites
 </Button>
 
-      {forecast.length > 0 && (
-        <Carousel className="w-50 mx-auto">
-        {forecast.map((item, index) => (
-          <Carousel.Item key={index}>
-            <Card className="mt-5 mb-5">
-              <Card.Body className="d-flex justify-content-between">
-                <Card.Title>
-                  {new Date(item.dt * 1000).toLocaleString()}
-                </Card.Title>
-                <Card.Subtitle className="mb-2 text-black fs-3">
-                  {Math.round(tempConverter(item.main.temp))}°C
-                </Card.Subtitle>
-                <Card.Text>
-                  Weather:{" "}
-                  {item.weather &&
-                  item.weather[0] &&
-                  item.weather[0].description
-                    ? item.weather[0].description
-                    : "N/A"}
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Carousel.Item>
-        ))}
-      </Carousel>
+{forecast.length > 0 && (
+  <Carousel className="w-50 mx-auto" nextIcon={null} prevIcon={null}>
+    {forecast.map((item, index) => (
+      <Carousel.Item key={index}>
+        <Card className="mt-5 mb-5 carosello-city">
+          <Card.Body className="d-flex justify-content-between fw-bold">
+            <Card.Title>
+              {new Date(item.dt * 1000).toLocaleString()}
+            </Card.Title>
+            <Card.Subtitle className="mb-2 text-black fs-3 fw-bold">
+              {Math.round(tempConverter(item.main.temp))}°C
+            </Card.Subtitle>
+            <Card.Text>
+              Weather:{" "}
+              {item.weather &&
+              item.weather[0] &&
+              item.weather[0].description
+                ? item.weather[0].description
+                : "N/A"}
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </Carousel.Item>
+    ))}
+  </Carousel>
+
       )}
       {nextDaysAverages.length > 0 && (
     <Row xs={2} sm={2} md={2} className="d-flex flex-wrap nowrap mb-5 ">

@@ -48,16 +48,14 @@ const RandomCitiesCarousel = () => {
   }, []);
 
   return (
-    <Carousel indicators={false}>
+    <Carousel indicators={false} className="carosello" nextIcon={null} prevIcon={null}>
       {cities.map((city) => (
         <Carousel.Item key={city.cityName} className="mt-5">
-        <div className="carousel-item-overlay">
-          <h3 className="text-center text-light">{city.cityName}</h3>
-          <h4 className="text-center text-light">{city.temperature}°C</h4>
-        </div>
-       
-      </Carousel.Item>
-      
+          <div className="carousel-item-overlay meteo-city">
+            <h3 className="text-center text-light fs-1 fw-bold">{city.cityName}</h3>
+            <h4 className="text-center text-light fs-1">{city.temperature}°C</h4>
+          </div>
+        </Carousel.Item>
       ))}
     </Carousel>
   );

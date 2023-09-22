@@ -14,10 +14,10 @@ const TownCard = ({ town }) => {
         <Col>
           <Card className="mt-5 w-50 mx-auto text-center Town">
             <Card.Body>
-              <Card.Title className="fs-1">{town.name}</Card.Title>
+              <Card.Title className="fs-1 fw-bold">{town.name}</Card.Title>
               <Card.Text>Conditions: {town.weather[0].main}</Card.Text>
               <Link to="/" className="nav-link">
-                <Button className="bg-white text-primary px-4 border border-2 border-primary">
+                <Button className="bg-white text-dark px-4 border border-2 border-dark">
                   Go Back
                 </Button>
               </Link>
